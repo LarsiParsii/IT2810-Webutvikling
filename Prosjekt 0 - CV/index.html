@@ -1,80 +1,198 @@
 <!DOCTYPE html>
 <html lang="no">
+  <head>
+    <title>Min CV</title>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <title>Min CV</title>
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body>
+    <div class="container">
+      <div class="bio">
+        <img
+          class="portrait"
+          src="/img/portrett_downscale.png"
+          alt="Lars Fredrik sitt portrett"
+        />
 
-<body>
+        <h1 class="heading">
+          <span class="heading__name">
+            <span class="nobreak">Lars Fredrik</span>
+            <span class="nobreak">Sveine Onsager</span>
+          </span>
+          <br />
+          <span class="heading__role">Nyutdannet elektroingeniør</span>
+        </h1>
 
-  <div class="" cv-container">
-    <div class="left-bar">
-      <h1>Lars Fredrik Sveine Onsager<br>
-        <span class="role">Nyutdannet elektroingeniør</span>
-      </h1>
+        <section class="contact-info">
+          <ul class="contact-info__list">
+            <li class="contact-info__item">
+              <a href="tel:+4792291949" class="contact-info__link"
+                ><img src="img/square-phone-solid.svg" alt="92291949"
+              /></a>
+            </li>
+
+            <li class="contact-info__item">
+              <a href="mailto:lfonsage@stud.ntnu.no" class="contact-info__link"
+                ><img src="img/square-envelope-solid.svg" alt="E-post"
+              /></a>
+            </li>
+
+            <li class="contact-info__item">
+              <a
+                href="http://www.linkedin.com/in/larsonsager/"
+                class="contact-info__link"
+                ><img src="/img/linkedin.svg" alt="LinkedIn"
+              /></a>
+            </li>
+
+            <li class="contact-info__item">
+              <a href="http://github.com/LarsiParsii" class="contact-info__link"
+                ><img src="/img/square-github.svg" alt="Github"
+              /></a>
+            </li>
+          </ul>
+        </section>
+      </div>
+
+      <div class="resume">
+        <section class="experience">
+          <h2>Erfaring</h2>
+
+          <ul class="resume__list">
+            <li class="resume__entry">
+              <h3 class="resume__">
+                <span class="resume__entry-date">Våren 2023</span>
+                <span class="resume__entry-role">Studentassistent</span>
+                <span class="resume__entry-organization"
+                  >Norges teknisk-naturvitenskapelige universitet</span
+                >
+              </h3>
+
+              <p class="resume__details">
+                Assistent og veileder for en gruppe yrkesfaglærere på
+                videregående skole som lærte Arduino grunnet nye krav til
+                programmeringskunnskaper hos lærere. <br /><br />Har også
+                utarbeidet deler av øvingsopplegget (arbeidskravet) innen
+                Arduinoprogrammering for høsten 2023. Dette skal benyttes av
+                førsteårsstudenter ved et studieprogram for
+                elektronikkingeniører ved NTNU. Dette gjøres i lag med en annen
+                student, og under veiledning av assisterende professor.
+              </p>
+            </li>
+
+            <li class="resume__entry">
+              <h3>
+                <span class="resume__entry-date">
+                  Februar 2021 - April 2023
+                </span>
+                <span class="resume__entry-role">Spritbartender</span>
+                <span class="resume__entry-organization"
+                  >Studentersamfundet i Trondhjem</span
+                >
+              </h3>
+
+              <!-- TODO Legge inn detaljer -->
+              <p class="resume__details">
+                Jobbet som bartender ved et av Norges største utesteder og
+                kulturarenaer, med flere barer og scener under ett tak, samt en
+                restaurant og café. Jeg arbeidet i Strossa og Selskapssiden,
+                Samfundets to 20-årsbarer. Arbeidsoppgavene bestod av
+                ekspedering av kunder og miksing av drinker, men også vasking og
+                istandgjøring av baren ved åpning og stenging, samt se til de
+                besøkende og koordinere arbeidsoppgaver med barsjef.
+              </p>
+            </li>
+
+            <li class="resume__entry">
+              <h3>
+                <span class="resume__entry-date">Sommeren 2021</span>
+                <span class="resume__entry-role">Assistent</span>
+                <span class="resume__entry-organization">Jevnaker kommune</span>
+              </h3>
+
+              <p class="resume__details">
+                Arbeidet som assistent på aktivitetstilbudet Aktiv Sommer. Der
+                assisterte jeg kursholder under en workshop hvor vi bygde droner
+                og luftputefartøy fra enkle materialer. Disse ble styrt av
+                Micro:bit-mikrokontollere. Deltagerne var barn i 5. til 7.
+                klasse. Fikk erfaring innen hvordan man kommuniserer tekniske
+                konsepter på en forståelig måte.
+
+                <br /><br />
+                To uker i august jobbet jeg i kommunens IKT-avdeling hvor jeg
+                utførte rutinemessig «tanking» av skole-PC-er, hvor
+                datamaskinene tilbakestilles og får installert nødvendig
+                programvare, på overkant av 200 PC-er. Jeg mottok anerkjennelse
+                for høy effektivitet.
+              </p>
+            </li>
+          </ul>
+        </section>
+
+        <section class="education">
+          <h2>Utdanning</h2>
+
+          <ul class="resume__list">
+            <li class="resume__entry">
+              <h3>
+                <span class="resume__entry-date">2020 - 2023</span>
+                <span class="resume__entry-role">Elektroingeniør</span>
+                <span class="resume__entry-organization">
+                  Norges teknisk-naturvitenskapelige universitet,
+                  Trondheim</span
+                >
+              </h3>
+
+              <p class="resume__details">
+                Opparbeidet kompetanse innen digital- og elektroteknikk, hvilket
+                innebar kretsanalyse, mikrokontrollersystemer, instrumentering,
+                og utforming av kretskort. Tilegnet meg en grundig forståelse av
+                sanntidsoperativsystemer (RTOS) og Bluetooth LE gjennom min
+                bacheloroppgave. Særlig interesse for programmering, med
+                erfaring innen Python og C/C++.
+
+                <br /><br />
+                <span class="details__subheader"
+                  >Utveksling ved Czech Technical University in Prague</span
+                >
+                Høstsemesteret 2023 ble tatt ved Det tekniske universitetet i
+                Praha gjennom Erasmus+. Under utenlandsoppholdet hadde jeg
+                emnene Pattern Recognition and Machine Learning, Logic Systems
+                and Processors, og Sensors and Measurements. Samtidig tok jeg
+                Matematiske metoder 3 ved NTNU som nettstudie.
+              </p>
+            </li>
+
+            <li class="resume__entry">
+              <h3>
+                <span class="resume__entry-date">2016 - 2019</span>
+                <span class="resume__entry-role">Data og elektronikk</span>
+                <span class="resume__entry-organization"
+                  >Hønefoss videregående skole</span
+                >
+              </h3>
+
+              <p class="resume__details">
+                Lært om oppbyggingen av elektroniske systemer, og hvordan man
+                kan bruke og konstruere disse på komponentnivå.
+
+                <br /><br />
+                <span class="details__subheader">Realfag</span>
+                Matte R1/R2, Fysikk 1
+              </p>
+            </li>
+          </ul>
+        </section>
+      </div>
     </div>
-
-    <div class="main-content">
-      <section>
-        <h2>Erfaring</h2>
-        <ul class="experience-list">
-
-          <li class="experience-item">
-            <h3>tittel1</h3>
-            <div class="details">
-              <p>detaljer1</p>
-            </div>
-          </li>
-
-          <li class="experience-item">
-            <h3>tittel2</h3>
-            <div class="details">
-              <p>detaljer2</p>
-            </div>
-          </li>
-
-          <li class="experience-item">
-            <h3>tittel3</h3>
-            <div class="details">
-              <p>detaljer3</p>
-            </div>
-          </li>
-
-        </ul>
-      </section>
-
-      <section>
-        <h2>Utdanning</h2>
-        <ul class="education-list">
-
-          <li class="education-item">
-            <h3>skole1</h3>
-            <div class="details">
-              <p>detaljer1</p>
-            </div>
-          </li>
-
-          <li class="education-item">
-            <h3>skole2</h3>
-            <div class="details">
-              <p>detaljer2</p>
-            </div>
-          </li>
-
-          <li class="education-item">
-            <h3>skole3</h3>
-            <div class="details">
-              <p>detaljer3</p>
-            </div>
-          </li>
-
-        </ul>
-      </section>
-
-    </div>
-  </div>
-
-</body>
-
+  </body>
 </html>
