@@ -3,12 +3,13 @@
   --clr-primary: #2589BD;
   --clr-secondary: #187795;
   --clr-accent: #3f3f5f;
+  --clr-entry-header: darkred;
   --clr-background: #141414;
   --clr-text: #FFF;
 
   --fs-xl: 1.9rem;
   --fs-600: 1.4rem;
-  --fs-500: 1.25rem;
+  --fs-500: 1.2rem;
   --fs-400: 1rem;
   --fs-300: 0.85rem;
   --fs-200: 0.75rem;
@@ -19,7 +20,7 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--clr-text);
-    /* border: 2px dashed red; */
+  /* border: 2px dashed red; */
 }
 
 body {
@@ -82,7 +83,7 @@ body {
 .resume {
   grid-area: 2 / 1 / -1 / -1;
   background-color: var(--clr-accent);
-  padding: 2.5rem min(5vw, 25px) 0 min(5vw, 25px);
+  padding: 1.5rem min(5vw, 25px) 0 min(5vw, 25px);
 }
 
 .resume__list {
@@ -97,23 +98,27 @@ body {
   display: flex;
   justify-content: center;
   font-size: var(--fs-xl);
-  margin-bottom: 0.8rem;
+  margin-bottom: 0rem;
 }
 
 .resume__entry {
   margin-bottom: 1rem;
 }
 
+/* The CSS below could be split into separate classes */
 .resume__entry-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
   align-items: end;
-  background-color: darkred;
+  background-color: var(--clr-entry-header);
   min-height: 2rem;
   row-gap: 0.3125rem;
   padding: 0.3125rem 1.25rem;
+  margin-top: 1.5em;
+  margin-bottom: calc(-0.3125rem * 3 - 0.5rem);
   border-radius: 50px;
+  
   position: relative;
   z-index: 2;
 }
@@ -130,20 +135,70 @@ body {
   text-align: right;
 }
 
-.resume__entry-role {
+.resume__entry-role,
+.resume__entry-category {
   grid-area: 2 / 1 / -1 / 2;
   font-size: var(--fs-500);
-  font-weight: 500;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px black;
 }
 
-.resume__details {
+.resume__box {
   background-color: var(--clr-primary);
-  font-size: var(--fs-500);
-  font-weight: 300;
-  text-align: justify;
-  margin: calc(-0.3125rem * 3 - 0.5rem) 0.1em 1em 0.1em;
-  padding: 2em 1em 1em 1em;
+  margin: 0.27rem 0.05em 0 0.05em;
+  padding: 2.5em 1em 1em 1em;
   border-radius: 0 0 30px 30px;
   position: relative;
   z-index: 1;
+  border: 3px solid var(--clr-entry-header);
+}
+
+.resume__details {
+  font-size: var(--fs-400);
+  font-weight: 300;
+  text-align: justify;
+  margin: 0;
+  padding: 0;
+}
+
+.details__subheader {
+  display: block;
+  font-size: var(--fs-400);
+  font-weight: 500;
+  text-shadow: 1px 1px 1px black;
+  margin-top: 1.5em;
+  margin-bottom: 0.25em;
+  text-align: left;
+}
+
+.resume__entry-category {
+  grid-area: 1 / 1 / -1 / -1;
+}
+
+.resume__list-two-column {
+  list-style-type: none;
+  margin-bottom: 1em;
+}
+
+.resume__skill-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1.25;
+}
+
+.skill-left,
+.skill-right {
+  display: inline-block;
+  width: 45%;
+}
+
+.skill-left {
+  font-size: var(--fs-400);
+  font-weight: 300;
+}
+
+.skill-right {
+  font-size: var(--fs-300);
+  font-weight: 200;
 }
