@@ -3,6 +3,8 @@
   <head>
     <title>Min CV</title>
     <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,18 +21,15 @@
       <div class="bio">
         <img
           class="portrait"
-          src="/img/portrett_downscale.png"
+          src="img/portrett_downscale.png"
           alt="Lars Fredrik sitt portrett"
         />
 
-        <h1 class="heading">
-          <span class="heading__name">
-            <span class="nobreak">Lars Fredrik</span>
-            <span class="nobreak">Sveine Onsager</span>
-          </span>
-          <br />
-          <span class="heading__role">Nyutdannet elektroingeniør</span>
+        <h1 class="heading__name">
+          <span class="nobreak">Lars Fredrik</span>
+          <span class="nobreak">Sveine Onsager</span>
         </h1>
+        <h2 class="heading__role">Nyutdannet elektroingeniør</h2>
 
         <section class="contact-info">
           <ul class="contact-info__list">
@@ -50,13 +49,13 @@
               <a
                 href="http://www.linkedin.com/in/larsonsager/"
                 class="contact-info__link"
-                ><img src="/img/linkedin.svg" alt="LinkedIn"
+                ><img src="img/linkedin.svg" alt="LinkedIn"
               /></a>
             </li>
 
             <li class="contact-info__item">
               <a href="http://github.com/LarsiParsii" class="contact-info__link"
-                ><img src="/img/square-github.svg" alt="Github"
+                ><img src="img/square-github.svg" alt="Github"
               /></a>
             </li>
           </ul>
@@ -64,7 +63,7 @@
       </div>
 
       <div class="resume">
-        <section class="experience">
+        <section class="resume__section">
           <h2 class="resume__section-heading">Erfaring</h2>
 
           <ul class="resume__list">
@@ -75,7 +74,9 @@
                 <h3 class="resume__entry-role">Studentassistent</h3>
               </div>
 
-              <div class="resume__box">
+              <div
+                class="resume__box resume__box--collapsible resume__box--hidden"
+              >
                 <p class="resume__details">
                   Assistent og veileder for en gruppe yrkesfaglærere på
                   videregående skole som lærte Arduino grunnet nye krav til
@@ -95,10 +96,12 @@
                 <p class="resume__entry-organization">
                   Studentersamfundet i Trondhjem
                 </p>
-                <h3 class="resume__entry-role">Spritbartender</h3>
+                <h3 class="resume__entry-role">Bartender</h3>
               </div>
 
-              <div class="resume__box">
+              <div
+                class="resume__box resume__box--collapsible resume__box--hidden"
+              >
                 <p class="resume__details">
                   Jobbet som bartender ved et av Norges største utesteder og
                   kulturarenaer, med flere barer og scener under ett tak, samt
@@ -119,7 +122,9 @@
                 <h3 class="resume__entry-role">Assistent</h3>
               </div>
 
-              <div class="resume__box">
+              <div
+                class="resume__box resume__box--collapsible resume__box--hidden"
+              >
                 <p class="resume__details">
                   Arbeidet som assistent på aktivitetstilbudet Aktiv Sommer. Der
                   assisterte jeg kursholder under en workshop hvor vi bygde
@@ -140,7 +145,7 @@
           </ul>
         </section>
 
-        <section class="education">
+        <section class="resume__section">
           <h2 class="resume__section-heading">Utdanning</h2>
 
           <ul class="resume__list">
@@ -151,7 +156,9 @@
                 <h3 class="resume__entry-role">Elektroingeniør</h3>
               </div>
 
-              <div class="resume__box">
+              <div
+                class="resume__box resume__box--collapsible resume__box--hidden"
+              >
                 <p class="resume__details">
                   Opparbeidet kompetanse innen digital- og elektroteknikk,
                   hvilket innebar kretsanalyse, mikrokontrollersystemer,
@@ -179,7 +186,9 @@
                 <h3 class="resume__entry-role">Data og elektronikk</h3>
               </div>
 
-              <div class="resume__box">
+              <div
+                class="resume__box resume__box--collapsible resume__box--hidden"
+              >
                 <p class="resume__details">
                   Lært om oppbyggingen av elektroniske systemer, og hvordan man
                   kan bruke og konstruere disse på komponentnivå.
@@ -192,7 +201,7 @@
           </ul>
         </section>
 
-        <section class="skills">
+        <section class="resume__section">
           <h2 class="resume__section-heading">Kvalifikasjoner</h2>
           <ul class="resume__list">
             <li class="resume__entry">
@@ -208,11 +217,11 @@
 
                 <li class="resume__skill-entry">
                   <span class="skill-left">Python</span>
-                  <span class="skill-right">Nybegynner/middels nivå</span>
+                  <span class="skill-right">Nybegynner++</span>
                 </li>
 
                 <li class="resume__skill-entry">
-                  <span class="skill-left">HTML/CSS/Javascript</span>
+                  <span class="skill-left">HTML/ CSS/ Javascript</span>
                   <span class="skill-right">Nybegynner</span>
                 </li>
               </ul>
@@ -266,5 +275,7 @@
         </section>
       </div>
     </div>
+
+    <script src="app.js"></script>
   </body>
 </html>

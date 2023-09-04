@@ -2,9 +2,10 @@
   font-size: 16px;
   --clr-primary: #2589BD;
   --clr-secondary: #187795;
-  --clr-accent: #3f3f5f;
-  --clr-entry-header: darkred;
-  --clr-background: #141414;
+  --clr-accent: #3f3f5f;  /* Ikke i bruk */
+  --clr-section-heading: rgb(255, 255, 255);
+  --clr-entry-heading: darkred;
+  --clr-background: #303030;
   --clr-text: #FFF;
 
   --fs-xl: 1.9rem;
@@ -27,7 +28,7 @@ body {
   font-family: 'League Spartan', sans-serif;
   font-size: var(--fs-300);
   font-weight: 300;
-  background-color: var(--clr-accent);
+  background-color: var(--clr-background);
 }
 
 .container {
@@ -54,7 +55,7 @@ body {
   width: auto;
   border-radius: 100% 100% 10% 10%;
   margin: 10px;
-  border: #141414 solid;
+  border: 3px solid#141414;
 }
 
 .nobreak {
@@ -63,10 +64,13 @@ body {
 
 .heading__name {
   font-size: var(--fs-xl);
+  font-weight: 600;
+  margin-bottom: 0.1em;
 }
 
 .heading__role {
-  font-size: var(--fs-600);
+  font-size: var(--fs-400);
+  font-weight: 400;
 }
 
 .contact-info__list {
@@ -74,6 +78,7 @@ body {
   flex-direction: row;
   gap: 10px;
   list-style: none;
+  margin-top: 1em;
 }
 
 .contact-info__link>img {
@@ -82,7 +87,6 @@ body {
 
 .resume {
   grid-area: 2 / 1 / -1 / -1;
-  background-color: var(--clr-accent);
   padding: 1.5rem min(5vw, 25px) 0 min(5vw, 25px);
 }
 
@@ -91,34 +95,37 @@ body {
 }
 
 .resume__list:last-child {
-  margin-bottom: 3.5rem;
+  padding-bottom: 0;
 }
 
-.resume__section-heading {
-  display: flex;
-  justify-content: center;
-  font-size: var(--fs-xl);
-  margin-bottom: 0rem;
-}
-
-.resume__entry {
+.resume__section {
   margin-bottom: 1rem;
 }
 
-/* The CSS below could be split into separate classes */
+.resume__section-heading {
+  color: var(--clr-section-heading);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  font-size: var(--fs-xl);
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.75rem;
+}
+
+.resume__entry {
+  padding-bottom: 1.75rem;
+}
+
 .resume__entry-header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr;
-  align-items: end;
-  background-color: var(--clr-entry-header);
+  align-items: center;
+  background-color: var(--clr-entry-heading);
   min-height: 2rem;
   row-gap: 0.3125rem;
   padding: 0.3125rem 1.25rem;
-  margin-top: 1.5em;
-  margin-bottom: calc(-0.3125rem * 3 - 0.5rem);
   border-radius: 50px;
-  
+
   position: relative;
   z-index: 2;
 }
@@ -130,7 +137,8 @@ body {
 
 .resume__entry-organization {
   grid-area: 2 / 2 / -1 / -1;
-  font-size: var(--fs-200);
+  font-size: var(--fs-400);
+  font-weight: 100;
   justify-self: right;
   text-align: right;
 }
@@ -144,19 +152,34 @@ body {
 }
 
 .resume__box {
-  background-color: var(--clr-primary);
-  margin: 0.27rem 0.05em 0 0.05em;
+  background-color: var(--clr-secondary);
+  margin: -1.2rem 0.06em 0 0.06em;
   padding: 2.5em 1em 1em 1em;
   border-radius: 0 0 30px 30px;
   position: relative;
   z-index: 1;
-  border: 3px solid var(--clr-entry-header);
+  border: 3px solid var(--clr-entry-heading);
+}
+
+.resume__box--collapsible {
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.3s ease;
+  max-height: 50em;
+  opacity: 1;
+}
+
+.resume__box--hidden {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  opacity: 0;
+  /* Adding opacity transition */
 }
 
 .resume__details {
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
   font-weight: 300;
-  text-align: justify;
+  text-align: left; /* Kan endres til justified */
+  line-height: 1.15em;
   margin: 0;
   padding: 0;
 }
@@ -185,6 +208,7 @@ body {
   justify-content: space-between;
   align-items: center;
   line-height: 1.25;
+  margin-bottom: 0.3em;
 }
 
 .skill-left,
@@ -194,11 +218,11 @@ body {
 }
 
 .skill-left {
-  font-size: var(--fs-400);
-  font-weight: 300;
+  font-size: var(--fs-500);
+  font-weight: 400;
 }
 
 .skill-right {
-  font-size: var(--fs-300);
-  font-weight: 200;
+  font-size: var(--fs-500);
+  font-weight: 300;
 }
