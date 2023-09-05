@@ -2,12 +2,14 @@
   font-size: 16px;
   --clr-primary: #2589BD;
   --clr-secondary: #187795;
-  --clr-accent: #3f3f5f;  /* Ikke i bruk */
+  --clr-accent: #3f3f5f;
+
   --clr-section-heading: rgb(255, 255, 255);
   --clr-entry-heading: darkred;
   --clr-background: #303030;
   --clr-text: #FFF;
 
+  --fs-xxl: 3rem;
   --fs-xl: 1.9rem;
   --fs-600: 1.4rem;
   --fs-500: 1.2rem;
@@ -46,8 +48,7 @@ body {
   text-align: center;
   padding-bottom: 0.5em;
   padding-top: 0.5em;
-  height: 250px;
-  border-radius: 0% 0%;
+  height: 20em;
 }
 
 .portrait {
@@ -66,11 +67,13 @@ body {
   font-size: var(--fs-xl);
   font-weight: 600;
   margin-bottom: 0.1em;
+  padding: 0 1rem 0 1rem;
 }
 
 .heading__role {
-  font-size: var(--fs-400);
+  font-size: var(--fs-500);
   font-weight: 400;
+  padding: 0 2rem 0 2rem;
 }
 
 .contact-info__list {
@@ -123,11 +126,11 @@ body {
   background-color: var(--clr-entry-heading);
   min-height: 2rem;
   row-gap: 0.3125rem;
-  padding: 0.3125rem 1.25rem;
+  padding: 0.3125rem 1.25rem 0.3125rem 1.25rem;
   border-radius: 50px;
-
   position: relative;
   z-index: 2;
+  cursor: pointer;
 }
 
 .resume__entry-date {
@@ -159,9 +162,6 @@ body {
   position: relative;
   z-index: 1;
   border: 3px solid var(--clr-entry-heading);
-}
-
-.resume__box--collapsible {
   transition: max-height 0.3s ease-out, padding 0.3s ease-out, opacity 0.3s ease;
   max-height: 50em;
   opacity: 1;
@@ -169,16 +169,30 @@ body {
 
 .resume__box--hidden {
   max-height: 0;
-  padding: 0;
   overflow: hidden;
   opacity: 0;
-  /* Adding opacity transition */
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.resume__entry-header--collapsible::before {
+  content: '➕';
+  position: absolute;
+  left: -20px;
+  /* Adjust as necessary */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.resume__entry-header--collapsible.expanded::before {
+  content: '➖';
 }
 
 .resume__details {
   font-size: var(--fs-500);
   font-weight: 300;
-  text-align: left; /* Kan endres til justified */
+  text-align: left;
+  /* Kan endres til justified */
   line-height: 1.15em;
   margin: 0;
   padding: 0;
@@ -225,4 +239,58 @@ body {
 .skill-right {
   font-size: var(--fs-500);
   font-weight: 300;
+}
+
+@media (min-width: 900px) and (min-height: 800px) {
+  .container {
+    display: block;
+  }
+
+  .bio {
+    justify-content: space-between;
+    height: 100vh;
+    max-width: min(40vw, 400px);
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .portrait {
+    width: 100%;
+    max-height: max-content;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+    border-bottom: 5px solid black;
+  }
+
+  .heading__name {
+    font-size: var(--fs-xxl);
+  }
+
+  .heading__role {
+    font-size: var(--fs-xl);
+    font-weight: 500;
+  }
+
+  .contact-info__list {
+    margin-bottom: 10vh;
+    gap: 20px;
+  }
+
+  .contact-info__link>img {
+    width: 4rem;
+  }
+
+  .resume {
+    padding: 3% min(10%, 700px) 5% min(10%, 700px);
+    margin-left: min(40vw, 400px);
+  }
+
+  .resume__entry-header {
+    cursor: auto;
+  }
 }
