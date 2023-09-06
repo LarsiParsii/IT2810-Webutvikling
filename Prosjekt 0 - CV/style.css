@@ -241,7 +241,7 @@ body {
   font-weight: 300;
 }
 
-@media (min-width: 900px) and (min-height: 800px) {
+@media (min-width: 900px) {
   .container {
     display: block;
   }
